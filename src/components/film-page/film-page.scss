@@ -1,0 +1,120 @@
+$small: 700px;
+
+.no-film {
+  font-size: 2em;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin: 50px;
+}
+
+.film {
+  max-width: 800px;
+  margin: auto;
+
+  // image is set dynamically
+  .backdrop {
+    height: 440px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  i.fa-arrow-left {
+    position: absolute;
+    top: -5px;
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    font-size: 2em;
+
+    &:hover {
+      cursor: pointer;
+      border-radius: 45px;
+      box-shadow: 0 0 5px white;
+    }
+  }
+
+  .film-container {
+    padding: 0 20px;
+
+    img {
+      position: absolute;
+      top: 300px;
+      width: 200px;
+      border-radius: 15px;
+      margin-left: 20px;
+
+      /* Tiny mobile */
+      @media screen and (max-width: $small) {
+        top: 340px;
+        width: 150px;
+        margin-left: 0;
+      }
+    }
+    
+    .film-header {
+      margin-left: 240px;
+      margin-top: 30px;
+      color: white;
+
+      /* Tiny mobile */
+      @media screen and (max-width: $small) {
+        margin-left: 175px;
+      }
+      
+      .film-title {
+        font-size: 3em;
+        font-weight: 700;
+        line-height: 1.2em;
+
+        /* Tiny mobile */
+        @media screen and (max-width: $small) {
+          font-size: 1.75em;
+          font-weight: 600;
+        }
+      }
+
+      .release-date {
+        font-size: 1.2em;
+        font-weight: 200;
+        color: rgb(170, 208, 226);
+
+        /* Tiny mobile */
+        @media screen and (max-width: $small) {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .divider {
+      margin: 40px 0 20px;
+      border-bottom: 1px solid grey;
+    }
+
+    .overview-title {
+      margin: 20px 0;
+
+      font-size: 2em;
+      font-weight: 700;
+      color: white;
+
+      /* Tiny mobile */
+      @media screen and (max-width: $small) {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+    }
+    .overview-text {
+      margin: 10px 0;
+
+      font-size: 1.2em;
+      font-weight: 200;
+      color: rgb(170, 208, 226);
+
+      /* Tiny mobile */
+      @media screen and (max-width: $small) {
+        font-size: 1em;
+      }
+    }
+  }
+}

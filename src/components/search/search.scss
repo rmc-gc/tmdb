@@ -1,0 +1,41 @@
+$margin: 50px;
+$color: #01d277;
+
+.search {
+  /* Bootstrap 4 text input with search icon */
+  .has-search {
+    .form-control {
+      border-radius: 20px;
+      height: calc(2.5rem + 2px);
+      padding-left: 1rem;
+      padding-right: 2.5rem;
+      color: $color;
+      font-weight: bold;
+
+      /* Alter focus border */
+      &:focus {
+        box-shadow: 0 0 5px 2px $color;
+      }
+      
+      /* Change placeholder text color */
+      &::placeholder {
+        color: $color;
+      }
+    }
+
+    /* The magnifying glass */
+    .form-control-feedback {
+      position: absolute;
+      width: calc(100% - (#{$margin} * 3));
+      line-height: 2.5rem;
+      pointer-events: none;
+      color: $color;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-control-feedback {
+        width: calc(100% - (#{30px} * 3));
+      }
+    }
+  }
+}

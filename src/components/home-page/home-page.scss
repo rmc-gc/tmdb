@@ -1,0 +1,23 @@
+.home-page {
+  text-align: center;
+  color: white;
+
+  margin: 0 50px;
+
+  @media screen and (max-width: 600px) {
+    margin: 0 20px;
+  }
+
+  .app-logo {
+    height: 20vmin;
+    pointer-events: none;
+    margin: 20px;
+  }
+
+  .list-title {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+}

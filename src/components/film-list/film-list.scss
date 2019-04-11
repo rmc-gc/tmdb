@@ -1,0 +1,107 @@
+.film-list {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    margin: 16px 0;
+    flex: 25%;
+    max-width: 25%;
+
+    .image-container {
+      display: inline-block;
+
+      img {
+        border-radius: 15px;
+        vertical-align: middle;
+        width: 200px;
+        height: 300px;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0 5px white;
+        }
+      }
+    }
+  }
+
+  .film-title {
+    position: relative;
+    top: -10px;
+    margin: 0 15px;
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.2em;
+  }
+
+  .release-date {
+    position: relative;
+    top: -5px;
+    color: rgb(170, 208, 226);
+    font-size: 1.1em;
+  }
+
+  .film-rating {
+    position: relative;
+    top: -290px;
+    left: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    width: 50px;
+
+    &--good {
+      background-color: #01d277;
+    }
+    &--fair {
+      background-color: rgb(65, 26, 153);
+    }
+    &--bad {
+      background-color: rgb(192, 54, 92);
+    }
+  }
+
+  /* Responsive layout - makes a three column layout instead of four columns */
+  @media screen and (max-width: 980px) {
+    .column {
+      flex: 33%;
+      max-width: 33%;
+    }
+
+    /* Now for a two column layout */
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+
+      /* Tiny mobile */
+      @media screen and (max-width: 480px) {
+        .film-title {
+          font-size: 1em;
+        }
+        .release-date {
+          font-size: .8em;
+
+        }
+        .column {
+          .image-container {
+            img {
+              width: 120px;
+              height: 180px;
+            }
+          }
+        }
+
+        .film-rating {
+          top: -175px;
+          left: 5px;
+        }
+      }
+    }
+  }
+  
+}
